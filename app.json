@@ -1,7 +1,7 @@
 
 {
-    "name": "Dayana",
-    "description": "Telegram's sassiest group manager. Modular Telegram group management bot!",
+    "name": "Dobby",
+    "description": "Telegram's assistant group manager. Modular Telegram group management bot!",
     "keywords": [
       "telegram",
       "best",
@@ -9,7 +9,7 @@
       "manager",
       "3"
     ],
-    "repository": "https://github.com/agung267/NISA",
+    "repository": "https://github.com/adnanrinaldi/NISA",
     "env": {
       "ENV": {
         "description": "Setting this to ANYTHING will enable env variables",

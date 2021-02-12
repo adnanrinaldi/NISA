@@ -26,12 +26,11 @@ from emilia.modules.languages import set_language
 
 PM_START_TEXT = """
 Hi {}, my name is {}! If you have any questions on how to use me, read /help.
-Don't forget join my group https://t.me/Temengoblok for news update.
 You can find the list of available commands with /help.
 """
 
 HELP_STRINGS = """
-Hey there! My name is **DAYANA**.
+Hey there! My name is **DOBBY**.
 I'm a modular group management bot with a few fun extras! Have a look at the following for an idea of some of \
 the things I can help you with.
 """

@@ -26,11 +26,12 @@ from emilia.modules.languages import set_language
 
 PM_START_TEXT = """
 Hi {}, my name is {}! If you have any questions on how to use me, read /help.
+Dobby's owner https://t.me/artherin.
 You can find the list of available commands with /help.
 """
 
 HELP_STRINGS = """
-Hey there! My name is **DOBBY**.
+Hey there! My name is **Dobby**.
 I'm a modular group management bot with a few fun extras! Have a look at the following for an idea of some of \
 the things I can help you with.
 """
@@ -151,13 +152,15 @@ def start(bot: Bot, update: Update, args: List[str]):
             buttons = InlineKeyboardMarkup(
                 [[InlineKeyboardButton(text="🎉 Add me to your group", url="https://t.me/dobbywwzbot?startgroup=new")],
                 [InlineKeyboardButton(text="💭 Language", callback_data="main_setlang"), InlineKeyboardButton(text="⚙️ Connect Group", callback_data="main_connect")],
+                [InlineKeyboardButton(text="👥 Dobby's Owner", url="https://t.me/artherin"), InlineKeyboardButton(text="🔔 Update Channel", url="https://t.me/artherin")],
+                [InlineKeyboardButton(text="❓ Help", url="https://t.me/dobbywwzbot?start=help"), InlineKeyboardButton(text="💖 Donate", url="http://paypal.me/AIrvandi")]])
             update.effective_message.reply_text(
                 tl(update.effective_message, PM_START_TEXT).format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_ID),
                 disable_web_page_preview=True,
                 parse_mode=ParseMode.MARKDOWN,
                 reply_markup=buttons)
-        else:
-            update.effective_message.reply_text(tl(update.effective_message, "Ada yang bisa saya bantu? 😊"))
+    else:
+        update.effective_message.reply_text(tl(update.effective_message, "Ada yang bisa saya bantu? 😊"))
 
 
 def m_connect_button(bot, update):

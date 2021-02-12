@@ -156,8 +156,8 @@ def start(bot: Bot, update: Update, args: List[str]):
                 disable_web_page_preview=True,
                 parse_mode=ParseMode.MARKDOWN,
                 reply_markup=buttons)
-    else:
-        update.effective_message.reply_text(tl(update.effective_message, "Ada yang bisa saya bantu? 😊"))
+        else:
+            update.effective_message.reply_text(tl(update.effective_message, "Ada yang bisa saya bantu? 😊"))
 
 
 def m_connect_button(bot, update):
